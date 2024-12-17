@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors - End Game</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Game Over!</h1>
+        <p id="finalScore"></p>
+
+        <button id="restartButton">Restart Game</button>
+        <button id="instructionsButton">Instructions</button>
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+        document.getElementById('restartButton').onclick = function() {
+            localStorage.removeItem('wins');
+            localStorage.removeItem('losses');
+            localStorage.removeItem('draws');
+            window.location.href = 'game2.html';
+        };
+     
+        document.getElementById('instructionsButton').onclick = function() {
+            window.location.href = 'index.html';
+        };
+        </script>
+</body>
+</html>
